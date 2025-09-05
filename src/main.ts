@@ -7,9 +7,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
   // Enable CORS
-  app.enableCors({
-    origin: "*"
-  });
+ app.enableCors({
+  origin: ['https://clinic-management-frontend.vercel.app'], // ✅ your frontend URL
+  credentials: true,  // ✅ allow cookies/auth headers
+});
 
   // Global validation pipe
   app.useGlobalPipes(new ValidationPipe({
