@@ -8,7 +8,7 @@ async function bootstrap() {
   
   // Enable CORS
  app.enableCors({
-  origin: ['https://clinic-management-frontend.vercel.app'], // ✅ your frontend URL
+  origin: ['https://clinic-management-frontend.vercel.app', 'http://localhost:8080'], // ✅ your frontend URL
   credentials: true,  // ✅ allow cookies/auth headers
 });
 
